@@ -7,14 +7,14 @@ char[] code = code1.toCharArray();
             if (mode == 0) {
 				if (code[i] == '1') {
 					mode = 1;
-				}else if (code[i] != '1' && i % 2 == 0) {
+				}else if (i % 2 == 0) {
 					 ret = ret.concat(String.valueOf(code[i]));
 				}
 			}else if (mode == 1) {
 				if (code[i] == '1') {
 					mode = 0;
 					
-				}else if (code[i] != '1' && i % 2 != 0) {
+				}else if (i % 2 != 0) {
 					 ret = ret.concat(String.valueOf(code[i]));
 				}
 			}
