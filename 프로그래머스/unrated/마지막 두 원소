@@ -1,0 +1,16 @@
+import java.util.Arrays;
+class Solution {
+    public int[] solution(int[] num_list) {
+     
+        int last = num_list[num_list.length - 1];
+		int first = num_list[num_list.length - 2];
+		int[] Num = Arrays.copyOf(num_list, num_list.length + 1);
+
+		if (last > first) {
+			Num[Num.length - 1] = last - first;
+		} else {
+			Num[Num.length - 1] = last * 2;
+		}
+      
+          return Num;
+		
